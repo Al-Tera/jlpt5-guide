@@ -159,8 +159,8 @@ body {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  width: 500px;
-  height: 500px;
+  width: 200px;
+  height: 200px;
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
@@ -174,6 +174,10 @@ body {
           align-items: center;
   font-weight: 700;
   font-size: 20px;
+  z-index: 100;
+  background: #363636;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .loader p {
@@ -182,52 +186,47 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.loader .rec {
+.loader .overflower {
   position: absolute;
-  width: 50px;
-  height: 250px;
-  -webkit-transform: rotateZ(var(--rot));
-          transform: rotateZ(var(--rot));
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.loader .rec .circle {
-  width: 25px;
-  height: 25px;
-  background: grey;
   border-radius: 50%;
-  -webkit-animation: circleAnim 1s infinite;
-          animation: circleAnim 1s infinite;
-  -webkit-animation-delay: var(--delay);
-          animation-delay: var(--delay);
+  z-index: 105;
+  background: white;
 }
 
-@-webkit-keyframes circleAnim {
-  0% {
-    background: grey;
-  }
-  50% {
-    background: cyan;
-  }
-  100% {
-    background: grey;
+.loader .overflower {
+  height: 150px;
+  width: 150px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.loader .spinner {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 105;
+  width: 150px;
+  height: 150px;
+  z-index: 102;
+  border: 30px solid steelblue;
+  border-bottom-color: transparent;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  -webkit-animation: spinAnim 1s infinite linear;
+          animation: spinAnim 1s infinite linear;
+}
+
+@-webkit-keyframes spinAnim {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
   }
 }
 
-@keyframes circleAnim {
-  0% {
-    background: grey;
-  }
-  50% {
-    background: cyan;
-  }
-  100% {
-    background: grey;
+@keyframes spinAnim {
+  to {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
   }
 }
 /*# sourceMappingURL=index.css.map */

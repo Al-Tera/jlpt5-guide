@@ -14,7 +14,8 @@ fetch("https://kanjialive-api.p.rapidapi.com/api/public/kanji/all", {
     response.json()
 )
 .then(data => {
-    // document.querySelector('.loader').style.display = 'none'
+    const loader = document.querySelector('.loader')
+    loader.parentNode.removeChild(loader)
 
     for(i=0;i<data.length;i++){
         const newDiv = document.createElement('div')
@@ -45,7 +46,7 @@ fetch("https://kanjialive-api.p.rapidapi.com/api/public/kanji/all", {
             video.play()
             video.playbackRate = playbackSpeed
         })
-        
+
         newDiv.appendChild(newP1)
         newDiv.appendChild(newP2)
         newDiv.appendChild(newP3)
@@ -71,3 +72,4 @@ spd.forEach((element,i)=>{
         }
     })
 })
+

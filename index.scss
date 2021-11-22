@@ -117,48 +117,58 @@ body{
     top:50%;
     left:50%;
     transform:translate(-50%,-50%);
-    width:500px;
-    height:500px;
+    width:200px;
+    height:200px;
     align-self: center;
     display:flex;
     justify-content: center;
     align-items: center;
     font-weight: 700;
     font-size: 20px;
+    z-index:100;
+    background:#363636;
+    border-radius: 50%;
+    // border: 20px solid black;
+    overflow: hidden;
     p{
         color:darkslategrey;
         letter-spacing: 7px;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 
     }
-
-    .rec{
+    .overflower{
         position:absolute;
-        width:50px;
-        height:250px;
-        transform:rotateZ(var(--rot));
-        display:flex;
-        justify-content: center;
-        .circle{
-            width:25px;
-            height:25px;
-            background:grey;
-            border-radius: 50%;
-            animation: circleAnim 1s infinite ;
-            animation-delay: var(--delay);
-        }
-        @keyframes circleAnim {
-            0%{
-                background:grey;
-
-            }
-            50%{
-                background:cyan;
-            }
-            100%{
-                background:grey;
-            }
-        }
+        border-radius: 50%;
+        z-index: 105;
+        background:white;
     }
+    .overflower{
+
+        height:150px;
+        width:150px;
+        display:grid;
+        place-items: center;
+    }
+    .spinner{
+        position:absolute;
+        border-radius: 50%;
+        z-index: 105;
+        // background:red;
+        width:150px;
+        height:150px;
+        z-index:102;
+        border: 30px solid steelblue;
+        border-bottom-color: transparent;
+        border-top-color: transparent;
+        border-right-color: transparent;
+        animation: spinAnim 1s infinite linear;
+    }
+    @keyframes spinAnim {
+        to{
+            transform: rotateZ(360deg);
+        }
+        
+    }
+
 
 }
