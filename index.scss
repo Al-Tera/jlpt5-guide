@@ -16,6 +16,7 @@ body{
 
 .video__container{
     position:relative;
+    margin-top: 50px;
     width:250px;
     height:250px;
     border: 1px solid grey;
@@ -31,11 +32,11 @@ body{
     }
     video{
         width:100%;
-        height:100%;
+        height:85%;
     }
     .settings{
-        height:15%;
         width:100%;
+        height:15%;
         background:rgb(54, 54, 54);
         display:flex;
         justify-content: space-evenly;
