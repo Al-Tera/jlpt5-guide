@@ -1,6 +1,6 @@
 const container = document.querySelector('.kanji__container')
 const video = document.querySelector('video')
-
+// var browser = browser || chrome
 var playbackSpeed = 1;
 
 fetch("https://kanjialive-api.p.rapidapi.com/api/public/kanji/all", {

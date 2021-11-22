@@ -25,7 +25,7 @@ body {
 .video__container {
   position: relative;
   margin-top: 50px;
-  width: 250px;
+  width: 210px;
   height: 250px;
   border: 1px solid grey;
   display: -webkit-box;
@@ -48,8 +48,8 @@ body {
 .video__container video {
   width: auto;
   height: 85%;
-  border: none !important;
-  outline: none;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .video__container .settings {
@@ -142,7 +142,6 @@ body {
 }
 
 .kanji .none {
-  content: 'noo';
   background: #363636;
 }
 
@@ -164,8 +163,6 @@ body {
           transform: translate(-50%, -50%);
   width: 200px;
   height: 200px;
-  -ms-flex-item-align: center;
-      align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -175,42 +172,27 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: 700;
-  font-size: 20px;
-  z-index: 100;
   background: #363636;
   border-radius: 50%;
   overflow: hidden;
 }
 
-.loader p {
-  color: darkslategrey;
-  letter-spacing: 7px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.loader .overflower {
+.loader * {
   position: absolute;
   border-radius: 50%;
-  z-index: 105;
-  background: white;
+  height: 150px;
+  width: 150px;
 }
 
 .loader .overflower {
-  height: 150px;
-  width: 150px;
+  background: white;
+  letter-spacing: 4px;
   display: -ms-grid;
   display: grid;
   place-items: center;
 }
 
 .loader .spinner {
-  position: absolute;
-  border-radius: 50%;
-  z-index: 105;
-  width: 150px;
-  height: 150px;
-  z-index: 102;
   border: 30px solid steelblue;
   border-bottom-color: transparent;
   border-top-color: transparent;
