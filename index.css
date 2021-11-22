@@ -46,8 +46,10 @@ body {
 }
 
 .video__container video {
-  width: 100%;
+  width: auto;
   height: 85%;
+  border: none !important;
+  outline: none;
 }
 
 .video__container .settings {

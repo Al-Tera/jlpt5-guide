@@ -31,8 +31,11 @@ body{
         text-align: center;
     }
     video{
-        width:100%;
+        width:auto;
         height:85%;
+        border: none !important;
+        outline: none;
+        // background:red;
     }
     .settings{
         width:100%;
